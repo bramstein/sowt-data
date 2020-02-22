@@ -45,7 +45,8 @@ function getData(run) {
     GROUP BY
       ${allServices}, self_hosted
     ORDER BY
-      total DESC;
+      total DESC
+    LIMIT 20;
   `);
 }
 
@@ -56,7 +57,12 @@ Promise.all(runs.map(function (run) {
     return getData(run);
   });
 })).then(function (results) {
-  let values = results[0].map(result => Object.values(result));
+  let values = [];
+  results.forEach(result => {
+    result.forEach(item => {
+      values.push(Object.values(item));
+    });
+  });
 	fs.writeFileSync('services-combination-counts.csv',
     CSV.stringify(Object.keys(results[0][0])) + CSV.stringify(values)
   );
