@@ -49,5 +49,15 @@ module.exports = {
   // Fontawesome is served from many CDNs, but only the Fontawesome
   // CDN is meant exclusively as a "webfont service", so we only
   // count inclusions from its domain.
-  FONTAWESOME: 'fontawesome\\.com'
+  FONTAWESOME: 'fontawesome\\.com',
+
+  FONTSLIVE: 'webfonts\\.fontslive\\.com',
+
+  JUST_ANOTHER_FOUNDRY: 'webfonts\\.justanotherfoundry\\.com',
+
+  TYPONINE: 'fonts\\.typonine\\.com',
+
+  KERNEST: 'kernest\\.com',
+
+  TYPEFRONT: 'typefront\\.com'
 };
