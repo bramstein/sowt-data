@@ -45,7 +45,7 @@ Promise.all(runs.map(function (run) {
   });
 })).then(function (results) {
   let values = results.map(result => Object.values(result));
-	fs.writeFileSync('results.csv',
+	fs.writeFileSync('service-counts.csv',
     CSV.stringify(Object.keys(results[0])) + CSV.stringify(values)
   );
 });
